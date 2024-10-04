@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>reLembre</title>
+
+<style>
+    body{
+        background-color: rgb(147, 208, 255);
+        width: 100%;
+    }
+    h1 {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    nav{
+        display: none;
+
+    }
+
+    .criando{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgb(255, 255, 255);
+        z-index: 4;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        
+    }
+
+    .flutuando{
+        top: 10%;
+        left: 10%;
+        background-color: rgb(79, 116, 164);
+        width: 30%;
+        margin: 10% auto;
+        padding: 2% 3%;
+        box-shadow: 3px 3px 5px rgb(75, 75, 75);
+        display: flex;
+        flex-direction: column;
+        border-radius: 30px;
+        input {
+            margin: 1.5vmin auto ;
+            width: 60%;
+        }
+    }
+
+
+</style>
+
+</head>
+<body>
+    <h1> Bem-vindo @user !</h1>
+     <img src="imagem/hamburguer.png" onclick="abrirmenu()">
+    <nav id="menu-inicial">
+    <ul>
+    <li>
+    <a href="login.html">Configurações</a>
+    </li>
+    <li>
+    <a href="login.html">Suporte</a>
+    </li>
+    <li>
+    <a href="login.html">Novos Produtos</a>
+    </li>
+    <li>
+    <a href="login.html">Sobre nós</a>
+    </li>
+    <li>
+    <a href="login.html">Contato</a>
+    </li>
+    </ul>
+    </nav>
+
+    <ul><li>
+    <button>Cadastre um novo dispositivo de alarme</button>
+    </li> </ul> 
+    <div class="criando">
+    <h1> Criando... </h1>
+    <div class="flutuando">
+    <input button type="text" placeholder="nome do alarme"></input>
+    <input button type="text" placeholder="id do alarme"></input>
+    <input button type="file" placeholder="som"></input>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
