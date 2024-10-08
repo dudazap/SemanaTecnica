@@ -2,7 +2,7 @@
         padding: 0;
         margin: 0;
         box-sizing: 0;
-        font-family: "Open Sans";
+        font-family: "Open";
 }
 
 body {  background-color: rgb(146, 162, 235);
@@ -21,6 +21,16 @@ div {   background-color: rgb(146, 162, 235);
         color: aliceblue;
 }
 
+.primeiro {
+        background-color: rgb(146, 162, 235);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 80%;
+        border-radius: 15px;
+        color: aliceblue;
+}
 
 input { padding: 15px;
         border: none;
@@ -30,7 +40,7 @@ input { padding: 15px;
 button {background-color: blue;
         border: none;
         padding: 15px;
-        width: 100%;
+        width: 80%;
         border-radius: 10px;
         color: aliceblue;
         font-size: 15px;}
