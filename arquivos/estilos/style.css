@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+.instrument-sans {
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    width: 100%;
+    background-color: #D7E2FF;
+    height: 100vh;
+}
+
+body.home {
+    background-color: #BACDFE;
+}
+
+.cabecalho {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    align-items: center;
+}
+
+img.icone {
+    margin: 1vmin;
+}
+
+#logo {
+    margin: 2vmin auto;
+}
+
+#icone_menu {
+    width: 45px;
+}
+
+.cabecalho > h1.cabecalho_titulo {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+nav#menu_inicial {
+    display: none;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 50%;
+    background-color: #E3EEF1;
+    padding: 1vh 1vw;
+    ul.menu > li {
+        font-size: 1em;
+        margin: 2px 0;
+        line-height: 1.8em;
+        a {
+            display: block;
+            text-decoration: none;
+            color: black;
+        }
+    }
+    ul.menu > li:hover{
+        background-color: #BACDFE;
+    }
+}
+
+main.inicio {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1.secao_titulo {
+        margin: 3vh auto;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    button {
+        margin: 1vh auto;
+        width: 40%;
+        font-size: 0.9em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #E3EEF1;
+        border: none;
+        border-radius: 10px;
+    }
+    button:hover{
+        box-shadow: 2px 2px 5px #000000AA;
+    }
+}
+
+div.formulario {
+    background-color: #E3EEF1;
+    border-radius: 10px;
+    width: 70%;
+    margin: 0 auto 2vh;
+    form {
+        padding: 3vmin 4vmin;
+        display: flex;
+        flex-direction: column;
+        input{
+            margin: 2vmin auto;
+            text-align: center;
+            font-size: 0.9em;
+            line-height: 3em;
+        }
+    }
+}
+
+input.form_campos {
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.38);
+}
+
+input.form_botao_submit {
+    width: 75%;
+    margin: 2vh auto 1vmin;
+    border: none;
+    font-weight: bold;
+}
+
+input.form_botao_submit:hover{
+    box-shadow: 2px 2px 5px #000000;
+}
+
+a.links_inicio {
+    margin: 1vmin auto;
+    font-size: 0.9em;
+    text-decoration: none;
+    color: #237BCD;
+}
+
+a.links_inicio:hover{
+    text-decoration: underline;
+}
+
+section.novo_dispositivo {
+    width: 100%;
+    div#add_dispositivo {
+        background-color: #E3EEF1;
+        display: grid;
+        grid-template-columns: 5% 90%;
+        column-gap: 2%;
+        align-items: center;
+    }
+}
+
+div.label_dispositivo {
+    color: black;
+    border-radius: 10px;
+    width: 80%;
+    margin: 3vh auto 2vh;
+    padding: 2vh 3vw;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    box-shadow: 2px 2px 5px #00000033;    
+}
+
+div.label_dispositivo:hover {
+    box-shadow: 3px 3px 5px #33333366;
+}
