@@ -5,15 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>reLembre</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
-<body>
-    <div class="tela-cadastro"></div>
-        <h1>É um prazer te ter conosco!</h1>
-        <input type="email" placeholder="email">
-        <br> <br>
-        <input type="password" placeholder="senha">
-        <br> <br>
-        <button>Criar</button>
-    </div>
+<body class="instrument-sans">
+    <header class="cabecalho">
+        <img class="icone" id="icone_menu" src="imagens/hamburguerzinho.png" alt="Icone de Menu">
+        <img class="icone" id="logo" src="imagens/icon_radar.png" alt="Logo">
+    </header>
+    <nav id="menu_inicial">
+        <ul class="menu">
+            <li>
+                <a href="#">Sobre</a>
+            </li>
+            <li>
+                <a href="#">Contato</a>
+            </li>
+            <li>
+                <a href="#">Configurações</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="inicio">
+        <h1 class="secao_titulo">É um prazer te ter conosco!</h1>
+        <div class="formulario">
+            <form action="" method="post">
+                <input type="text" class="form_campos" name="campo_username" id="campo_username" placeholder="digite um nome de usuário" required>
+                <input type="email" class="form_campos" name="campo_email" id="campo_email" placeholder="digite seu email" required>
+                <input type="password" class="form_campos" name="campo_senha" id="campo_senha" placeholder="digite sua senha" required>
+                <input type="submit" value="Criar Conta" class="form_botao_submit" id="botao_criar_conta">
+            </form>
+        </div>
+        <a class="links_inicio" href="login.html">Já tem uma conta?</a>
+    </main>
 </body>
 </html>
