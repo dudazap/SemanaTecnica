@@ -4,73 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+        padding: 0;
+        margin: 0;
+        box-sizing: 0;
+        font-family: "Open Sans";
+        }
 
+        h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        body{
+            background-color: rgb(146, 162, 235);
+        }
+
+        button {background-color: rgb(255, 255, 255);
+        border: none;
+        width: 30%;
+        border-radius: 20px;
+        font-size: 15px;
+        padding: 15px;
+        border: none;
+        outline: none;
+        font-size: 15px;}
+
+        button:hover{
+        background-color: rgba(255, 255, 255, 0.781);
+        cursor: pointer;}
+
+    </style>
     <title>reLembre</title>
-
-<style>
-    body{
-        background-color: rgb(147, 208, 255);
-        width: 100%;
-    }
-    h1 {
-        text-align: center;
-        font-size: 25px;
-    }
-
-    nav{
-        display: none;
-
-    }
-
-    .criando{
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: black;
-        z-index: 4;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        
-    }
-</style>
-
 </head>
 <body>
-    <h1> Bem-vindo @user !</h1>
-     <img src="imagem/hamburguer.png" onclick="abrirmenu()">
-    <nav id="menu-inicial">
-    <ul>
-    <li>
-    <a href="login.html">Configurações</a>
-    </li>
-    <li>
-    <a href="login.html">Suporte</a>
-    </li>
-    <li>
-    <a href="login.html">Novos Produtos</a>
-    </li>
-    <li>
-    <a href="login.html">Sobre nós</a>
-    </li>
-    <li>
-    <a href="login.html">Contato</a>
-    </li>
-    </ul>
-    </nav>
-
-    <ul><li>
-    <button>Cadastre um novo dispositivo de alarme</button>
-    </li> </ul> 
-    <div class="criando">
-    <h1> Criando... </h1>
-    <input button type="text">nome do alarme</input>
-    <input button type="text">id do alarme</input>
-    <input button type="file">som</input>
-    </div>
-
-    <script src="script.js"></script>
+    <h1> Bem vindo </h1>
+    <a href="login.html"> <button>login</button></a> 
+    <a href="cadastrese.html"> <button>cadastre-se </button></a>
 </body>
 </html>
