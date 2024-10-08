@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Arduino Bluetooth Connection</title>
+</head>
+    
+<body>
+        <h1>Connect to Arduino via Bluetooth</h1> 
+        <button id="connect">Connect to Arduino</button>
+        <button id="led-on" disabled>Turn LED On</button>
+        <button id="led-off" disabled>Turn LED Off</button>
+        
+        <p id="status">Status: Not Connected</p>
+        
+        <script>
+            let characteristic;
+                const connectButton = document.getElementById('connect');
+                const ledOnButton = document.getElementById('led-on');
+                const ledOffButton = document.getElementById('led-off');
+                const statusText = document.getElementById('status');
+            
+            connectButton.addEventListener('click', async () => {
+                 try {
+                    const device = await
+                    navigator.bluetooth.requestDevice ({
+                         acceptAllDevices: true,
+                         optionalServices: ['battery_service'] // Ajuste o serviço se necessário 
+                        });
+                        const server = await
+                        device.gatt.connect();
+
+                        const service = await 
+                        server.getPrimaryService ('battery_service');
+
+                        characteristic = await
+                        service.getCharacteristic('battery_level');
+
+                        statusText.textContent = 'Connected to Arduino';
+            
+                        // Ativar botões de controle do LED após conexão
+                        ledOnButton.disabled = false;
+                        ledOffButton.disabled = false;
+                    } catch (error) {
+                        statusText.textContent =
+                        `Error: ${error.message}`; 
+                        }});
+                    ledOnButton.addEventListener('click', () => {
+                        
+                    sendCommandToArduino('1'); // Envia '1' para ligar o LED
+            });
+            
+            ledOffButton.addEventListener('click',
+            () => { 
+            sendCommandToArduino('0'); // Envia '0' para desligar o LED
+
+            });
+            
+            async function
+            sendCommandToArduino(command) {
+                try {
+                    const encoder =
+                    new TextEncoder();
+                    const value =
+                    encoder.encode(command);
+
+             await 
+            characteristic.writeValue(value); 
+            statusText.textContent =
+            `Sent command: ${command}`;
+              } catch (error) { 
+                statusText.textContent =
+            `Error: ${error.message}`;
+         } 
+        } 
+              
+        </script>
+    </body>
+</html>
