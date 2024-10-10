@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Troca de Mensagens</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        input { padding: 10px; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Troca de Mensagens com o Arduino</h1>
+    <form id="messageForm">
+        <label for="message">Digite sua mensagem:</label><br><br>
+        <input type="text" id="message" name="message"><br><br>
+        <button type="submit">Enviar</button>
+    </form>
+    <h2>Resposta do Arduino:</h2>
+    <p id="response"></p>
+    <script>
+        document.getElementById('messageForm').onsubmit = function(event) {
+            event.preventDefault();
+            var message = document.getElementById('message').value;
+            fetch('/send?message=' + message)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('response').innerText = data;
+                });
+        };
+
+
+
+        
+    </script>
+</body>
+</html>
