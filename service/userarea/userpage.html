@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reLembre - Login</title>
+    <link rel="shortcut icon" href="../../arquivos/imagens/icon_radar2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../arquivos/estilos/reset.css">
+    <link rel="stylesheet" href="../../arquivos/estilos/style.css">
+    <script src="../../arquivos/scripts/userPage.js"></script>
+</head>
+<body class="instrument-sans">
+    <header class="cabecalho">
+        <img class="icone" id="icone_menu" src="../../arquivos/imagens/icon_menu.png" alt="Icone de Menu">
+        <h1 class="cabecalho_titulo"> Olá, @user</h1>
+    </header>
+    <nav id="menu_inicial">
+        <ul class="menu">
+            <li>
+                <a href="#">Sobre</a>
+            </li>
+            <li>
+                <a href="#">Contato</a>
+            </li>
+            <li>
+                <a href="#">Configurações</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="userpage">
+        <section class="novo_dispositivo">
+            <div id="add_dispositivo" class="label_dispositivo">
+                <p>+</p>
+                <p>Cadastre um novo dispositivo de alarme</p>
+            </div>
+        </section>
+        <section class="dispositivos">
+            <ul class="lista_dispositivos">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <div id="form_add_dispositivo">
+            <header class="cabecalho_add_dispositivo">
+                <h1 class="titulo_add_dispositivo" id="add_dispositivo_voltar">&#x2190;</h1>
+                <h1 class="titulo_add_dispositivo">+ Novo Dispositivo</h1>
+            </header>
+            <form id="formulario_dispositivo" action="">
+                <div class="campo_formulario">
+                    <label for="form_disp_nome">Nome:</label>
+                    <input type="text" name="form_disp_nome" id="form_disp_nome">
+                </div>
+                <div class="campo_formulario">
+                    <label for="form_disp_som">Som do alarme:</label>
+                    <input type="file" name="form_disp_som" id="form_disp_som">
+                </div>
+                <div class="campo_formulario">
+                    <label for="form_disp_cor">Cor de Fundo:</label>
+                    <input type="color" name="form_disp_cor" id="form_disp_cor">
+                </div>
+                <div class="campo_formulario">
+                    <button>Adicionar Alarme</button>
+                    <button>Apagar Alarme</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

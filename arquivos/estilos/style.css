@@ -177,3 +177,60 @@ div.label_dispositivo {
 div.label_dispositivo:hover {
     box-shadow: 3px 3px 5px #33333366;
 }
+
+div#form_add_dispositivo {
+    display: none;
+    position: fixed;
+    top: 1vh;
+    left: 2vw;
+    width: 96vw;
+    height: 98vh;
+    background-color: #FCFFDE;
+    padding: 2%;
+}
+
+header.cabecalho_add_dispositivo {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    align-items: center;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    h1 {
+        line-height: 2em;
+    }
+    h1:first-child {
+        font-size: 1.4em;
+    }
+    h1:first-child:hover{
+        font-weight: bolder;
+        text-shadow: 2px 2px 5px #00000088;
+    }
+}
+
+form#formulario_dispositivo {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+
+
+    div.campo_formulario {
+        margin: 1vh 2vw;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        label {
+            margin-right: 3vw;
+        }
+
+        input[type="text"] {
+            width: 70%;
+            font-size: 1.1em;
+            line-height: 1.5em;
+        }
+    }
+}
+
