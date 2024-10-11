@@ -213,24 +213,47 @@ form#formulario_dispositivo {
     display: flex;
     flex-direction: column;
     height: 60%;
-
-
     div.campo_formulario {
         margin: 1vh 2vw;
         width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
-        
         label {
-            margin-right: 3vw;
+            margin-right: 2vw;
         }
-
         input[type="text"] {
+            color: #333333;
             width: 70%;
             font-size: 1.1em;
-            line-height: 1.5em;
+            line-height: 1.6em;
+            background-color: #E3EEF1;
+            border: none;
+            border-radius: 10px;
         }
+        input[type="file"]{
+            font-size: 0.8em;
+        }
+        input[type="color"]{
+            width: 80px;
+        }
+    }
+    button#add_alarme {
+        margin: 3vh auto;
+        width: 35%;
+        max-width: 150px;
+        font-size: 1em;
+        font-weight: bold;
+        padding: 2vmin;
+        border: none;
+        border-radius: 10px;
+        background-color: #E5E5DA75;
+    }
+    button#add_alarme:hover {
+        background-color: #E5E5DA;
     }
 }
 
+section.dispositivos h2.nome_dispositivo{
+    text-align: center;
+}
